@@ -1,6 +1,8 @@
-import React, { useEffect, useReducer, useState } from "react";
+import React, {useState } from "react";
+import Effect from "./component/Effect";
 import Reducer from './component/Reducer';
 import UseMemo from "./component/UseMemo";
+
 
 
 
@@ -12,13 +14,7 @@ const App =()=> {
   setCount(Count +1)
   
  }
- const[num,setNum]=useState(0);
-  const[nums,setNums]=useState(0)
-
-  useEffect=(()=>{
-    alert("I am Clicked")
-  },[num])
-
+ 
   return (
   
       <div>
@@ -48,12 +44,8 @@ The useState() is a Hook that allows you to have state variables in functional c
     <h1>{Count}</h1>
     <button onClick={Increment}>Increment</button>
     <hr/><div>
-    <h2>3:What is useEffect Hook ?(Implementation)?</h2>
-<p>UseEffect :useEffect hook is designed to use lifecycle method in the functional component.
-UsEffect hook gets triggered for the componentDidMount.componentDidUpdate and componentUnWillMOunt lifecycle</p>
-      <h4>Increment</h4><button onClick={()=>{setNum(num +1);}}>click Me {num}</button><br/>
-      <h4>Decrement</h4><button onClick={()=>{setNums(nums -1);}}>click Me {nums}</button>
-      </div>
+   <Effect/>
+    </div>
       <hr/>
         <>
         <Reducer/>
